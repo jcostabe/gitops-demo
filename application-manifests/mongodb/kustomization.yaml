@@ -4,6 +4,5 @@ namespace: production
 resources:
 - mongodb-statefulset.yaml
 - mongodb-svc.yaml
-- mongoexpress-deploy.yaml
 - ssd-claim.yaml
 - ssd-storageclass.yaml
