@@ -5,4 +5,4 @@ resources:
 - hpa.yaml
 - deploy.yaml
 - svc.yaml
-- sealedsecret.json
+- sealedsecret.yaml
