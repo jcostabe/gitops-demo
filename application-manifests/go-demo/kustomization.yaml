@@ -4,5 +4,5 @@ namespace: production
 resources:
 - hpa.yaml
 - deploy.yaml
-- svc.yaml
+- service.yaml
 - sealedsecret.yaml
