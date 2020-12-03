@@ -13,7 +13,7 @@ spec:
   - host: jcostabe.evilcorp.com
     http:
       paths:
-      - path: /
+      - path: "/*"
         backend:
           serviceName: go-demo-svc
           servicePort: 8080
