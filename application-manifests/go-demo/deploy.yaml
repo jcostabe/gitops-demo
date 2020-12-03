@@ -27,6 +27,12 @@ spec:
       - image: jcostabe/go-demo-2:1.0
         imagePullPolicy: Always
         name: go-demo
+        env:
+        - name: APP_VERSION
+          value: 2.0
+        volumeMounts:
+        - name: config-volume
+          mountPath: /config
         resources: 
           limits:
             cpu: 100m
@@ -34,4 +40,7 @@ spec:
           requests:
             cpu: 100m
             memory: 50Mi 
-
+      volumes:
+        - name: config-volume
+          configMap:
+            name: go-demo-cfg
