@@ -32,7 +32,7 @@ spec:
           value: "1.1"
         volumeMounts:
         - name: config-volume
-          mountPath: /go/src/github.com/jcostabe/go-demo/config
+          mountPath: /config
         resources: 
           limits:
             cpu: 100m
