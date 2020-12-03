@@ -14,7 +14,7 @@ spec:
       tier: backend
   strategy:
     rollingUpdate:
-      maxSurge: 25%
+      maxSurge: 50%
       maxUnavailable: 25%
     type: RollingUpdate
   template:
@@ -24,12 +24,12 @@ spec:
         tier: backend
     spec:
       containers:
-      - image: jcostabe/go-demo-2:1.1
+      - image: jcostabe/go-demo-2:1.2
         imagePullPolicy: Always
         name: go-demo
         env:
         - name: APP_VERSION
-          value: "1.1"
+          value: "1.2"
         volumeMounts:
         - name: config-volume
           mountPath: /config
