@@ -16,8 +16,6 @@ spec:
       - path: /
         pathType: Prefix
         backend:
-          service:
-            name: go-demo-svc
-            port:
-              number: 8080
+          serviceName: go-demo-svc
+          servicePort: 8080
 
