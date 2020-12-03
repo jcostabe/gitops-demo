@@ -7,15 +7,15 @@ metadata:
   name: go-demo
   namespace: default
 spec:
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
       app: go-demo
       tier: backend
   strategy:
     rollingUpdate:
-      maxSurge: 50%
-      maxUnavailable: 50%
+      maxSurge: 25%
+      maxUnavailable: 25%
     type: RollingUpdate
   template:
     metadata:
