@@ -7,15 +7,15 @@ metadata:
   name: go-demo
   namespace: default
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: go-demo
       tier: backend
   strategy:
     rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
+      maxSurge: 50%
+      maxUnavailable: 50%
     type: RollingUpdate
   template:
     metadata:
@@ -24,7 +24,7 @@ spec:
         tier: backend
     spec:
       containers:
-      - image: jcostabe/go-demo-2:1.1
+      - image: jcostabe/go-demo-2:1.2
         imagePullPolicy: Always
         name: go-demo
         env:
