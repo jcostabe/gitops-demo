@@ -5,7 +5,7 @@ metadata:
 data:
   application.yaml: |+
     environment: production
-    serviceName: go-demo-2
+    serviceName: go-demo-test
     version: ${APP_VERSION}
     serverPort: 8080
     mongodbHost: "mongodb-svc"
